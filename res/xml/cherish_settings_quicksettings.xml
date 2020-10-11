@@ -17,6 +17,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/quicksettings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="qs_category"
+        android:title="@string/qs_themes_category_title" >
+
+        <com.cherish.settings.preferences.SystemSettingListPreference
+            android:key="qs_panel_bg_use_new_tint"
+            android:title="@string/qs_bg_use_new_tint"
+            android:dialogTitle="@string/qs_bg_use_new_tint"
+            android:entries="@array/qs_tint_entries"
+            android:entryValues="@array/qs_tint_values"
+            android:summary="%s"
+            android:defaultValue="1" />
+
+    </PreferenceCategory>
 	
 		<!-- QS brightness slider -->
     <com.cherish.settings.preferences.SystemSettingMasterSwitchPreference
